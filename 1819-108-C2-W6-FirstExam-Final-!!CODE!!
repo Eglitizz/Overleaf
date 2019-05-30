@@ -1,0 +1,82 @@
+\documentclass[11pt]{book}
+\usepackage{sectsty}
+\usepackage[utf8]{inputenc}
+\usepackage[paperwidth=6.85039in, paperheight=9.8in, margin=0.5in]{geometry}
+\usepackage{titleps}
+\usepackage{amsmath}
+\usepackage{titlesec}
+\usepackage{ragged2e}
+\usepackage{scrlayer-scrpage}
+\usepackage{blindtext}
+\addtolength{\topmargin}{0.5in}
+\titleformat*{\section}{\fontsize{12}{12}\textbf}
+\titlespacing{\section}{1pt}{*1}{*1}
+\titlespacing{\subsection}{0pt}{*0}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+\pagenumbering{roman}
+\newpagestyle{ruled}
+{\sethead{}{SPECIAL FUNCTIONS}{}\headrule}
+\pagestyle{ruled}
+\setlength\oddsidemargin{\dimexpr(\paperwidth-\textwidth)/2 - 1in\relax}
+\setlength\evensidemargin{\oddsidemargin}
+\usepackage{ragged2e}
+\cfoot{724}
+\begin{document}
+\setcounter{page}{680}
+\noindent second solution to (18.147) as a linear combination of (18.148) and (18.149) given by
+\begin{align*}
+   \begin{split}
+    \textit{U(a,c;x)}\equiv \frac{\pi}{sin \pi c} \bigg[\frac{M(a,c;x)}{\Gamma(a-c+1)\Gamma(c)}-x^{1-c}  \frac{M(a-c+1,2-c;x)}{\Gamma(a)\Gamma(2-c)} \bigg].
+    \end{split}
+\end{align*}
+\noindent This has a wll behaved limit asa c approaches an integer
+\bigskip
+\section*{\centering \textit {18.11.1 Properties of confluent hypergeometric functions}}
+\noindent The properties of confluent hypergeometric functions can be derived from those of ordinary hypergeometri functions by letting \textit{$x\rightarrow $} \textit{$x/b$} and taking the limit \textit{$b\rightarrow$} \textit{$\infty$}, in the same way as both the equation and its solution wew derived.A general procedure of this sort is called \textit{$confluence$} process.
+
+\smallskip
+$$ \textit{Special cases}$$
+\smallskip
+\noindent The general nature of the confluent hypergeometric equation allows one to write a large number of elementary functions in terms of the confluent hypergeometric functions \textit{ M(A,C;X)}. Once again, such identifications can be made from the series expansions (18.148) directly, or by transformations of the confluent hypergeometric quation into a more familiar equation for which the solutions are already known.Some particular examples of well known secial cases of the confluent hypergeometric function ar as follows:\bigskip
+\justifying
+\begin{align*}
+    \begin{split}
+    M(a,a;x)=e^x,
+    \end{split}
+    \begin{split}
+       M(1,2;2X)=\frac{e^x sinh x }{x}, 
+    \end{split}\\
+    \begin{split}
+        M(-n,1;x)=L_n(x),
+    \end{split}
+            \begin{split}
+    M(-n,m+1;x)=\frac{n!m!}{(n+m)!}L_n^m(x),
+    \end{split}\\
+    \begin{split}
+        M(-n, \frac{1}{2};x^2)=\frac{(-1)^nn!}{(2n)!}H_{2n}(x)
+    \end{split}
+    \begin{split}
+        M(-n, \frac{3}{2};x^2),=\frac{(-1)^nn!}{2(2n+1)!}\frac{H_{2n+1}(x)}{x},
+    \end{split}\\
+    \begin{split}
+        M(v+ \frac{1}{2},2v+1;2ix)=v!e^{ix}(\frac{x}{2})^{-v}
+J_v(x),    
+\end{split}
+\begin{split}
+    M(\frac{1}{2}, \frac{3}{2};-x^2)=\frac{\sqrt{\pi}}{2x}erf(x)
+\end{split}
+\end{align*}
+\noindent where $n$ and $m$ are integers $L_n^m$ is an associatef Legendre polynomial, $H_n(x)$ is a Hermite polynomial, $J_v(x)$ is a Bessel function and erf(x) is the error function discussed in section 18.12.4
+\medskip
+$$ \textit{Integral representation}$$
+\noindent Using te integral reprsentation (18.144) of the ordinary hypergeometric function, exchangin $a$ and $b$ and carring out the process of confluece gives
+\begin{align*}
+    \begin{split}
+    M(a,c,x)=\frac{\Gamma (c)}{\Gamma (a)\gamma(c-a)}\int^1_0 e^{tx}t{a-1}(1-t)^{c-a-1}dt,
+    \end{split}
+    \end{align*} 
+    \medskip
+\begin{center}
+    724
+\end{center}
+\end{document}
